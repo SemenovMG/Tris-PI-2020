@@ -1,0 +1,26 @@
+﻿@model SearchRequestData
+
+<form asp-action="Search" method="post">
+    <label asp-for="SearchLine">@Html.DisplayNameFor(m => m.SearchLine)</label>
+    <input asp-for="SearchLine" />
+    <br />
+
+    <label asp-for="IsInStore">@Html.DisplayNameFor(m => m.IsInStore)</label>
+    <input asp-for="IsInStore" />
+    <br />
+
+    <label asp-for="ProducedAfter">@Html.DisplayNameFor(m => m.ProducedAfter)</label>
+    <input asp-for="ProducedAfter" />
+    <br />
+
+    <label asp-for="MaxPrice">@Html.DisplayNameFor(m => m.MaxPrice)</label>
+    <input asp-for="MaxPrice" />
+    <br />
+
+    <label asp-for="Category">@Html.DisplayNameFor(m => m.Category)</label>
+    <select asp-for="Category" asp-items="ViewBag.Categories">
+    </select>
+
+
+    <button class="btn btn-danger">ТЫК</button>
+</form>

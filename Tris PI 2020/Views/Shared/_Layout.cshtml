@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">
+            <a class="p-2 text-dark" asp-controller="Home"
+               asp-action="Index">ТРИС пример</a>
+        </h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            @if (IsSectionDefined("Header"))
+            {
+                RenderSection("Header");
+            }
+            <a class="p-2 text-dark" asp-controller="Home"
+               asp-action="List">Товары</a>
+            <a class="p-2 text-dark" href="#">Заказы</a>
+            <a class="p-2 text-dark" asp-controller="Home"
+               asp-action="Search">Поиск</a>
+        </nav>
+    </header>
+
+    <div class="m-lg-4">
+        @RenderBody()
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row  m-lg-auto">
+            <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">Курс ТРИС ВГУ имени П.М. Машерова &copy; 2015-2020</small>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

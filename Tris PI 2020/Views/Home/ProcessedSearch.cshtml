@@ -1,0 +1,24 @@
+﻿@model SearchRequestData
+@{
+    ViewBag.Title = "Результат поиска";
+}
+
+<label asp-for="SearchLine">@Html.DisplayNameFor(m => m.SearchLine) :</label>
+@Model.SearchLine
+<br />
+
+<label asp-for="IsInStore">@Html.DisplayNameFor(m => m.IsInStore) :</label>
+@Model.IsInStore
+<br />
+
+<label asp-for="ProducedAfter">@Html.DisplayNameFor(m => m.ProducedAfter)</label>
+@Model.ProducedAfter
+<br />
+
+<label asp-for="MaxPrice">@Html.DisplayNameFor(m => m.MaxPrice)</label>
+@Model.MaxPrice
+<br />
+
+@*<label asp-for="Category">@Html.DisplayNameFor(m => m.Category)</label>
+@Model.Category
+<br />*@

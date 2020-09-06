@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Product>
+
+
+<ul>
+    @foreach (var p in Model)
+    {
+        //C# comment
+        <li>
+            @p.Name (@p.Price $)
+        </li>
+    }
+
+    <!--
+    email: @@vsu.by
+        -->
+</ul>
